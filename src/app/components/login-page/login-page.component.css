@@ -1,0 +1,16 @@
+.form {
+  width: 600px;
+  margin: 200px auto;
+  padding: 40px;
+  border: 2px solid black;
+  border-radius: 5%;
+  background: linear-gradient(to left, lightblue 10%, lightgreen 90%);
+}
+
+form input {
+  margin-bottom: 10px;
+}
+
+form label {
+  margin-top: 10px;
+}

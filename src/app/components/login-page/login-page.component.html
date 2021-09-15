@@ -1,0 +1,22 @@
+<form ngForm #formStatus="ngForm" class="form">
+
+  <div>
+    <label for="userName" class="form-label">User Name</label>
+    <input ngModel #refUserName="ngModel" #username name="first" type="text" class="form-control" required id="userName"
+      placeholder="userName" />
+
+    <span *ngIf="refUserName.touched && refUserName.invalid" class="alert-danger">*User Name Is Required.</span>
+  </div>
+  <div>
+    <label for="password" class="form-label">Password</label>
+    <input ngModel #refPassword="ngModel" #pass type="password" name="last" class="form-control" required id="password"
+      placeholder="password" />
+
+    <span *ngIf="refPassword.touched && refPassword.invalid" class="alert-danger">*Password Is Required.</span>
+  </div>
+  <div class="form-row">
+    <button class="btn btn-primary" [disabled]="formStatus.invalid"
+      (click)="login(username.value,pass.value)">Login</button>
+  </div>
+
+</form>
